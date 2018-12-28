@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+
+
+<div class= "pic"><img src="assets/images/th.jpg" alt="burger king logo"></div>
+
+
+<ul class= "not"> 
+  {{#each burger}}
+    {{#unless devoured}}
+      {{> burger/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+
+
+<ul class="ate"> 
+  {{#each burger}}
+    {{#if devoured}}
+      {{> burger/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+<form class="burger-form">
+
+  <div class="form-group">
+    <label for="burger"><h1>Eat-Da-Burger</h1></label>
+
+ <div class="form-group">
+    <label for="burger"></label>
+    <textarea id="eatburger" name="burgername" rows="8" cols="40"></textarea>
+  </div>
+
+   
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
